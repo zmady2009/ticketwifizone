@@ -35,7 +35,11 @@
       "Bash(start http://localhost:3010)",
       "Bash(powershell -Command \"if \\(Test-Path .next\\) { Remove-Item -Recurse -Force .next; Write-Host ''Cache .next supprime'' } else { Write-Host ''Pas de cache .next'' }\")",
       "Bash(npx next dev --port 3010)",
-      "Bash(test -f .gitignore)"
+      "Bash(test -f .gitignore)",
+      "Bash(gh --version)",
+      "Bash(gh auth status)",
+      "Skill(1.0.1:\\\\git:commit)",
+      "Skill(1.0.1:\\\\git:commit:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
