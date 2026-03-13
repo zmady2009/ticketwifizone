@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Background -->
+  <rect width="200" height="200" rx="40" fill="#123B8B"/>
+
+  <!-- WiFi Signal Waves -->
+  <g stroke="white" stroke-width="8" stroke-linecap="round">
+    <!-- Bottom wave -->
+    <path d="M 60 120 Q 100 140 140 120" />
+    <!-- Middle wave -->
+    <path d="M 45 100 Q 100 125 155 100" />
+    <!-- Top wave -->
+    <path d="M 30 80 Q 100 110 170 80" />
+  </g>
+
+  <!-- Center dot -->
+  <circle cx="100" cy="135" r="8" fill="white"/>
+
+  <!-- Ticket shape indicator -->
+  <rect x="75" y="155" width="50" height="20" rx="4" fill="#81B545"/>
+  <circle cx="80" cy="165" r="3" fill="white"/>
+  <circle cx="120" cy="165" r="3" fill="white"/>
+</svg>

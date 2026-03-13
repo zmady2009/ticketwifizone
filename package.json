@@ -1,0 +1,45 @@
+{
+  "name": "ticketwifizone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plateforme SaaS de vente automatique de tickets WiFi via Mobile Money pour l'Afrique",
+  "scripts": {
+    "dev": "next dev",
+    "dev:clean": "rm -rf .next && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:types": "npx supabase gen types typescript --project-id $SUPABASE_PROJECT_ID > src/types/database.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "@types/leaflet": "^1.9.21",
+    "africastalking": "^0.7.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "csv-parse": "^5.5.0",
+    "dotenv": "^17.3.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.400.0",
+    "next": "16.1.6",
+    "qrcode": "^1.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "@types/qrcode": "^1.5.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.1.6",
+    "pg": "^8.18.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0"
+  }
+}

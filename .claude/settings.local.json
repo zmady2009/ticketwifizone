@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(PORT=3004 npm run dev)",
+      "Bash(PORT=3005 npm run dev)",
+      "Bash(PORT=3010 npm run dev)",
+      "mcp__zai-mcp-server__extract_text_from_screenshot",
+      "Bash(npm run lint)",
+      "Bash(npx next lint)",
+      "Bash(node -c src/components/dashboard/PendingRequestsList.tsx)",
+      "mcp__Windows-MCP__Snapshot",
+      "mcp__Windows-MCP__Shortcut",
+      "mcp__Windows-MCP__App",
+      "mcp__Windows-MCP__Click",
+      "mcp__Windows-MCP__Type",
+      "mcp__Windows-MCP__Wait",
+      "Bash(perl -i -pe 's/WiFi<\\\\/CardTitle>/WiFi<\\\\/CardTitle>/ if $. == 351' \"C:/Users/USER/apps/ticketwifizone/src/app/dashboard/page.tsx\")",
+      "Bash(awk 'NR==351' \"C:/Users/USER/apps/ticketwifizone/src/app/dashboard/page.tsx\")",
+      "Bash(awk 'NR==272' \"C:/Users/USER/apps/ticketwifizone/src/app/dashboard/page.tsx\")",
+      "Bash(python3 -c \":*)",
+      "Bash(awk 'NR>=305 && NR<=315' src/app/dashboard/page.tsx)",
+      "Bash(awk 'NR>=270 && NR<=275' src/app/dashboard/page.tsx)",
+      "Bash(npx next dev -p 3010)",
+      "Bash(while read f)",
+      "Bash(do grep -L \"Promise\" \"$f\")",
+      "Bash(done)",
+      "Bash(grep -n \"zoneId\" /c/Users/USER/apps/ticketwifizone/src/app/zone/[zoneId]/buy/page.tsx)",
+      "Bash(start cmd /k \"npm run dev -- --port 3010\")",
+      "Bash(del \"C:\\\\Users\\\\USER\\\\apps\\\\ticketwifizone\\\\.next\\\\dev\\\\lock\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 5; try { $response = Invoke-WebRequest -Uri ''http://localhost:3010'' -Method HEAD -TimeoutSec 2; Write-Host ''Server is running! Status:'' $response.StatusCode } catch { Write-Host ''Server not responding yet'' }\")",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue\")",
+      "Bash(powershell -Command \"try { $response = Invoke-WebRequest -Uri ''http://localhost:3010'' -Method GET -TimeoutSec 5; Write-Host ''SUCCESS: HTTP'' $response.StatusCode } catch { Write-Host ''ERROR:'' $_Exception.Message }\")",
+      "Bash(start http://localhost:3010)",
+      "Bash(powershell -Command \"if \\(Test-Path .next\\) { Remove-Item -Recurse -Force .next; Write-Host ''Cache .next supprime'' } else { Write-Host ''Pas de cache .next'' }\")",
+      "Bash(npx next dev --port 3010)",
+      "Bash(test -f .gitignore)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}
