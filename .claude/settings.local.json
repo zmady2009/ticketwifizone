@@ -39,7 +39,14 @@
       "Bash(gh --version)",
       "Bash(gh auth status)",
       "Skill(1.0.1:\\\\git:commit)",
-      "Skill(1.0.1:\\\\git:commit:*)"
+      "Skill(1.0.1:\\\\git:commit:*)",
+      "Bash(gh auth login)",
+      "Bash(gh repo create ticketwifizone --public --source=. --remote=origin --push)",
+      "Bash(ls -la .env*)",
+      "Bash(npx vercel --version)",
+      "Bash(npx vercel --prod)",
+      "Bash(npx vercel login)",
+      "Bash(npm run start)"
     ]
   },
   "enableAllProjectMcpServers": true,
