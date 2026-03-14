@@ -201,6 +201,7 @@ export default function SettingsPage() {
               <Label htmlFor="businessName">Nom du business</Label>
               <Input
                 id="businessName"
+                name="business_name"
                 type="text"
                 defaultValue={profile?.business_name || ''}
                 placeholder="Ex: WiFi Zone Cissin"
@@ -211,6 +212,7 @@ export default function SettingsPage() {
               <Label htmlFor="phone">Téléphone</Label>
               <Input
                 id="phone"
+                name="phone"
                 type="tel"
                 defaultValue={profile?.phone || ''}
                 placeholder="70 12 34 56"
@@ -221,6 +223,7 @@ export default function SettingsPage() {
               <Label htmlFor="city">Ville</Label>
               <Input
                 id="city"
+                name="city"
                 type="text"
                 defaultValue={profile?.city || 'Ouagadougou'}
               />
