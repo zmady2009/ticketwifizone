@@ -232,7 +232,7 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
   // Rendu Écran 1: Sélection du tarif
   if (screen === 'tarif') {
     return (
-      <div className="space-y-4">
+      <div className="space-y-4 p-4">
         {/* Badge 0% commission */}
         <div className="flex justify-center">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold">
@@ -325,7 +325,7 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
       : null;
 
     return (
-      <div className="space-y-4">
+      <div className="space-y-4 p-4">
         {/* Header */}
         <div className="pb-4 border-b border-gray-200">
           <button
@@ -341,7 +341,7 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
         </div>
 
         {/* Liste des opérateurs */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {activeOperators.map((operator) => {
             const config = OPERATOR_CONFIGS[operator];
             const isSelected = selectedOperator === operator;
@@ -351,12 +351,9 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
                 onClick={() => setSelectedOperator(operator)}
                 className={`p-4 rounded-2xl text-center transition-all ${
                   isSelected
-                    ? 'ring-4 ring-offset-2 ring-brand-600'
-                    : 'opacity-90 hover:opacity-100 active:scale-[0.95]'
+                    ? `${config.colorClass} ring-4 ring-offset-2 ring-brand-600`
+                    : 'bg-gray-100 opacity-90 hover:opacity-100 active:scale-[0.95]'
                 }`}
-                style={{
-                  background: isSelected ? config.colorClass : '#f3f4f6',
-                }}
               >
                 <div className={isSelected ? 'text-white' : 'text-gray-900'}>
                   <p className="text-xs font-medium opacity-80">Payer via</p>
@@ -384,21 +381,18 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
                     e.currentTarget.dataset.paymentInitiated = "true";
                   }}
                 >
-                  <div
-                    className="p-4 rounded-2xl text-white shadow-lg active:scale-[0.98] transition-transform"
-                    style={{ background: selectedConfig.colorClass }}
-                  >
+                  <div className={`p-4 rounded-2xl text-white shadow-lg active:scale-[0.98] transition-transform ${selectedConfig.colorClass}`}>
                     <p className="font-bold text-lg">
                       💳 Payer {formatCFA(selectedTarif!.price_fcfa)} via {selectedConfig.displayName}
                     </p>
-                    <p className="text-sm opacity-90 mt-2 font-mono text-white">
+                    <p className="text-sm opacity-90 mt-2 font-mono">
                       {buildUSSDCode(
                         selectedConfig.format,
                         paymentMethods.find((pm) => pm.operator === selectedOperator)!.phone_number,
                         selectedTarif!.price_fcfa
                       )}
                     </p>
-                    <p className="text-xs opacity-75 mt-2 text-white">
+                    <p className="text-xs opacity-75 mt-2">
                       Cliquez pour ouvrir le dialer et payer
                     </p>
                   </div>
@@ -492,7 +486,7 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
   // Rendu Écran 3: Attente de confirmation
   if (screen === 'waiting') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6 p-4">
         {/* Spinner animé */}
         <div className="relative">
           <div className="w-20 h-20 border-4 border-brand-200 rounded-full" />
@@ -537,7 +531,7 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
   // Rendu Écran 4: Succès - Code WiFi
   if (screen === 'success' && ticket) {
     return (
-      <div className="space-y-6">
+      <div className="space-y-6 p-4">
         {/* Animation succès */}
         <div className="text-center">
           <div className="w-20 h-20 mx-auto rounded-full bg-green-100 flex items-center justify-center mb-4">
@@ -621,7 +615,7 @@ export function PurchaseFlow({ zone, tarifs, paymentMethods }: PurchaseFlowProps
   // Rendu Écran 5: Expiré
   if (screen === 'expired') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6 p-4">
         <div className="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center">
           <Clock className="w-10 h-10 text-red-600" />
         </div>
